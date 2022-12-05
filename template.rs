@@ -1,19 +1,20 @@
+#![feature(type_alias_impl_trait)]
 use std::time::Instant;
 
-use bstr::BString;
+use bstr::{BString, ByteSlice};
 use problems::load;
 
-type Parsed = ();
+type Parsed<'a> = impl Iterator<Item = ()> + 'a;
 
-fn parsing(input: &BString) -> color_eyre::Result<Parsed> {
+fn parsing(input: &BString) -> color_eyre::Result<Parsed<'_>> {
     todo!("Parsing")
 }
 
-fn part1(input: Parsed) {
+fn part1(input: Parsed<'_>) {
     todo!("todo part1")
 }
 
-fn part2(input: Parsed) {
+fn part2(input: Parsed<'_>) {
     todo!("todo part2")
 }
 

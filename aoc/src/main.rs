@@ -95,7 +95,6 @@ fn main() -> color_eyre::Result<()> {
                 .arg(&day_str)
                 .args(["--", "--part", "1", "--input", "void", "--show-impl-parts"])
                 .output()?;
-
             let impl_part: u32 = impl_parts.stdout.to_str()?.trim().parse()?;
             let part = args.part.unwrap_or(impl_part);
 

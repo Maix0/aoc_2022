@@ -1,3 +1,4 @@
+#![feature(type_alias_impl_trait)]
 use std::path::PathBuf;
 
 use bstr::BString;
